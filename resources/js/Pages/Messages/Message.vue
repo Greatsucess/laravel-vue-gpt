@@ -43,9 +43,10 @@ const deleteThisMessage = () => {
 
                         <div v-if="isModalOpen" class="absolute modal top-6">
                             <!-- Modal content here -->
-                            <div class="px-4 py-1 bg-gray-400 cursor-pointer modal-content rounded-xl"
+                            <div class="cursor-pointer modal-content rounded-xl delete-msg"
                                 @click="deleteThisMessage">
-                                <p>Delete</p>
+                                <!-- <p>Delete</p> -->
+                                <i class="fa fa-trash " ></i>
                             </div>
                         </div>
                         <!-- <span class="block text-xs font-semibold tracking-wider uppercase">
@@ -58,3 +59,19 @@ const deleteThisMessage = () => {
         </div>
     </div>
 </template>
+<style>
+    .delete-msg {
+        padding: 3px 8px;
+        border: solid 1px white;
+        border-radius: 45px;
+        position: absolute;
+        right: -25px;
+        color: white;
+        
+    }
+    .delete-msg:hover {
+        border: solid 1px rgba(221, 66, 18, 0.835);
+        color: rgba(221, 66, 18, 0.835);
+    }
+    
+</style>
